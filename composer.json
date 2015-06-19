@@ -1,5 +1,5 @@
 {
-    "name": "tonis-io/response-cache",
+    "name": "tonis-io/error-handler",
     "authors": [
         {
             "name": "Kyle Spraggs",
@@ -16,14 +16,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Tonis\\ResponseCache\\": [
+            "Tonis\\ErrorHandler\\": [
                 "src/"
             ]
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tonis\\ResponseCache\\": [
+            "Tonis\\ErrorHandler\\": [
                 "test/"
             ]
         }
