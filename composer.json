@@ -8,10 +8,10 @@
     ],
     "license": "BSD-3-Clause",
     "require": {
-        "php": ">=5.5",
-        "monolog/monolog": "^1.0"
+        "php": ">=5.5"
     },
     "require-dev": {
+        "monolog/monolog": "^1.0",
         "phpunit/phpunit": "^4.0",
         "squizlabs/php_codesniffer": "^2.0"
     },
