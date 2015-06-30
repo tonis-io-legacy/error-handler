@@ -4,7 +4,7 @@
 
 # Tonis\ErrorHandler
 
-Tonis\ErrorHandler is simple logs errors using your choice of PSR-3 compatible loggers.
+Tonis\ErrorHandler is simple middleware that logs errors using your choice of PSR-3 compatible loggers.
 
 Composer
 --------
