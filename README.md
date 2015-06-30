@@ -1,32 +1,24 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tonis-io/response-time/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tonis-io/response-time/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/tonis-io/response-time/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/tonis-io/response-time/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/tonis-io/response-time/badges/build.png?b=master)](https://scrutinizer-ci.com/g/tonis-io/response-time/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tonis-io/error-handler/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tonis-io/error-handler/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/tonis-io/error-handler/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/tonis-io/error-handler/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/tonis-io/error-handler/badges/build.png?b=master)](https://scrutinizer-ci.com/g/tonis-io/error-handler/build-status/master)
 
-# Tonis\ResponseTime
+# Tonis\ErrorHandler
 
-Tonis\ResponseTime is simple middleware that adds a `X-Response-Time` header to responses.
+Tonis\ErrorHandler is simple logs errors using your choice of PSR-3 compatible loggers.
 
 Composer
 --------
 
 ```
-composer require tonis-io/response-time
+composer require tonis-io/error-handler
 ```
 
 Usage
 -----
 
 ```php
-$responseTime = new \Tonis\ResponseTime;
+// create an instance and give it your psr-3 logger
+$responseTime = new \Tonis\ErrorHandler(new \Monolog\Logger('default'));
 
 // add $responseTime to your middleware queue
 ```
-
-Configuration
--------------
-
-`Tonis\ResponseTime` optionally takes an array of options.
-
-  * digits: the number of digits to have in the response (default: 3)
-  * header: the header to use (default: X-Response-Time)
-  * suffix: include suffix output (default: true)
