@@ -31,7 +31,13 @@ final class ErrorHandler
         ResponseInterface $response,
         callable $next
     ) {
-        $this->logger->error($error);
+        $context = [
+            'method' => $request->getMethod(),
+            'uri'    => (string) $request->getUri()
+        ];
+
+        $this->logger->error($error, $context);
+
         return $next($request, $response, $error);
     }
 }
