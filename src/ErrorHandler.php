@@ -29,7 +29,7 @@ final class ErrorHandler
         $error,
         ServerRequestInterface $request,
         ResponseInterface $response,
-        callable $next = null
+        callable $next
     ) {
         $this->logger->error($error);
         return $next($request, $response, $error);
